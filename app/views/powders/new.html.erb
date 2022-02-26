@@ -1,0 +1,18 @@
+<%= render 'nav' %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>新增药品</h1>
+      <%= simple_form_for @powder do |f| %>
+        <%= f.input :name, label: "名称" %>
+        <%= f.input :stockonhand, label: "现有库存" %>
+        <%= f.input :inqty, label: "入库数量" %>
+        <%= f.input :price_retail, label: "零售价格" %>
+        <%= f.input :price_bulk, label: "进货价格" %>
+        <%= f.input :location, label: "库位" %>
+        <%= f.association :supplier, label: "名称", prompt:'选择供应商' %>
+        <%= f.submit class: 'btn btn-primary', label:'确定' %>
+      <% end %>
+    </div>
+  </div>
+</div>
