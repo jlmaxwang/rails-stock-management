@@ -8,10 +8,9 @@
   <div class="card ms-1" style="width: 18rem;">
       <div class="card-body">
         <a href="<%= powder_path(powder) %>">
-          <h5 class="card-title">名称：<%= powder.name %></h5>
+          <h5 class="card-title display-6"><%= powder.name %></h5>
           <h6 class="card-subtitle mt-3 mb-3 text-muted">现有库存：<%= powder.stockonhand %></h6>
           <p class="card-text mb-3">库位<%= powder.location %></p>
-          <a href="<%= root_path %>" class="card-link mb-3">返回</a>
           <a href="<%= edit_powder_path(powder.id) %>" class="card-link mb-3">编辑</a>
         </a>
       </div>
