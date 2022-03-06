@@ -2,6 +2,7 @@ class PowdersController < ApplicationController
   before_action :set_powder, only:[:show, :update, :edit, :destroy]
   def index
     @powders = Powder.all
+
   end
   def show
   end
